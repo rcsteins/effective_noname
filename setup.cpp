@@ -1,7 +1,7 @@
 #include "setup.h"
 
 bool Setup::setup() {
-    if ( !setting.font.loadFromFile( "media/arial.ttf") ) return false;
+    if ( !setting.font.loadFromFile( "./media/arial.ttf") ) return false;
     setting.message.setFont( setting.font );
     setting.message.setCharacterSize(72);
     setting.message.setPosition(300.f,300.f);
@@ -13,9 +13,9 @@ bool Setup::setup() {
 
 bool Setup::loadImages() {
     std::vector<StringPair> stringPairs = {
-        StringPair("red_ship",  "media/testShip2.bmp"),
-        StringPair("green_ship","media/testShip3.bmp"),
-        StringPair("laser",     "media/bullet.bmp")
+        StringPair("red_ship",  "media/red3.bmp"),
+        StringPair("green_ship","media/green3.bmp"),
+        StringPair("laser",     "media/blue_laz.bmp")
     };
     
     for(auto& stringPair : stringPairs) {
